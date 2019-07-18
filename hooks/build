@@ -8,6 +8,12 @@ function log_msg() {
   echo "$(date +'%Y-%m-%d %T')" $@ | tee -a "${LOG_FILE}"
 }
 
+pwd
+ls
+ls ../
+find / -iname Dockerfile
+env
+export
 . ../version
 log "Building the docker image"
 docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME \
