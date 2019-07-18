@@ -1,21 +1,13 @@
 #!/usr/bin/env bash
 
-set -x
-
 declare -r LOG_FILE="/tmp/${0//.sh/}_$(date +'%Y%m%d').log"
 
 function log_msg() {
   echo "$(date +'%Y-%m-%d %T')" $@ | tee -a "${LOG_FILE}"
 }
 
-pwd
-ls -lhart
-ls -lhart ../
-find / -iname Dockerfile -type f -exec cat {} \;
-env
-export
 . version
-log "Building the docker image"
+log_msg "Building the docker image"
 docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME \
   --build-arg DOCKER_IMAGE=${DOCKER_IMAGE} \
   --build-arg KAMUS_CLI_VERSION=${KAMUS_CLI_VERSION} \

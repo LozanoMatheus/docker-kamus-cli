@@ -8,7 +8,7 @@ The intention for this project is to create a Docker image with [Kamus CLI](http
 
 ## External URLs (Docker Hub, CircleCI and Github)
 
-* [Docker Hub](https://hub.docker.com/r/lozanomatheus/docker_kamus_cli)
+* [Docker Hub](https://hub.docker.com/r/lozanomatheus/kamus_cli)
 * [GitHub](https://github.com/LozanoMatheus/docker_kamus_cli)
 * [CircleCI](https://circleci.com/gh/LozanoMatheus/docker_kamus_cli)
 
