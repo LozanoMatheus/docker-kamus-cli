@@ -9,12 +9,12 @@ function log_msg() {
 }
 
 pwd
-ls
-ls ../
-find / -iname Dockerfile
+ls -lhart
+ls -lhart ../
+find / -iname Dockerfile -type f -exec cat {} \;
 env
 export
-. ../version
+. version
 log "Building the docker image"
 docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME \
   --build-arg DOCKER_IMAGE=${DOCKER_IMAGE} \
